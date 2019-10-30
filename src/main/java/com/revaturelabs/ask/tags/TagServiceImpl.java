@@ -34,19 +34,21 @@ public class TagServiceImpl implements TagService {
    * @return Tag tag - Returns the tag matching the string.
    * 
    */
+
+  /*
+   * @Override public Tag getTagByName(String name) { Tag tag = null; List<Tag> list = (List<Tag>)
+   * tagRepository.findAll(); for (Tag t : list) { if (t.getTagName().contentEquals(name)) { tag =
+   * t; } } if (tag.equals(null)) { throw new TagNotFoundException("Tag Not Found"); } return tag; }
+   */
+
   @Override
   public Tag getTagByName(String name) {
-    Tag tag = null;
-    List<Tag> list = (List<Tag>) tagRepository.findAll();
-    for (Tag t : list) {
-      if (t.getTagName().contentEquals(name)) {
-        tag = t;
-      }
-    }
+    Tag tag = tagRepository.findByTagName(name);
     if (tag.equals(null)) {
       throw new TagNotFoundException("Tag Not Found");
     }
     return tag;
+
   }
 
   /**
