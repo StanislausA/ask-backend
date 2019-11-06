@@ -36,6 +36,13 @@ public class UserController {
   @Autowired
   TagService tagService;
 
+  /**
+   * findAll uses the HTTP GET request to retrieve the list of all users currently registered.
+   * 
+   * @param page
+   * @param size
+   * @return a ResponseEntity object to render in the front-end.
+   */
   @GetMapping
   public ResponseEntity<List<User>> findAll(@RequestParam(required = false) Integer page,
       @RequestParam(required = false) Integer size) {
@@ -49,6 +56,14 @@ public class UserController {
     return ResponseEntity.ok(userService.findAll(page, size).getContent());
   }
 
+  /**
+   * "findById" looks for a user by their respective ID
+   * If no such user is found, it will return a
+   * ResponseStatusException.
+   * 
+   * @param id
+   * @return
+   */
   @GetMapping("/{id}")
   public ResponseEntity<User> findById(@PathVariable int id) {
     try {
@@ -60,6 +75,18 @@ public class UserController {
     }
   }
 
+  /**
+   * "createOrUpdate" looks for the user by id, if they exist, 
+   * and creates one if they don't exist.
+   * 
+   * It will not create a user if the data used to create one matches 
+   * a currently existing one in the database, sending the 
+   * ResponseStatusException instead.
+   * 
+   * @param user
+   * @param id
+   * @return the resulting User object, or 
+   */
   @PutMapping("/{id}")
   public User createOrUpdate(@RequestBody User user, @PathVariable int id) {
     user.setId(id);
@@ -70,6 +97,18 @@ public class UserController {
     }
   }
 
+  /**
+   * "updateUser" gets new User object data, looks for current user
+   * using the id, and replaces a user's old data in the database
+   * with new data from the User object, retrieved from the front-end.
+   * 
+   * It will not update any user's data if all the User object's data
+   * matches current user's data or if the user doesn't exist.
+   * 
+   * @param user
+   * @param id
+   * @return
+   */
   @PatchMapping("/{id}")
   public User updateUser(@RequestBody User user, @PathVariable int id) {
     user.setId(id);
@@ -84,11 +123,28 @@ public class UserController {
     }
   }
 
+  /**
+   * "createUser" simply gets the new User object's data and 
+   * creates a new row in the Users table in the database
+   * using said data.
+   * 
+   * @param user
+   * @return the new user.
+   */
   @PostMapping
   public User createUser(@RequestBody User user) {
     return userService.create(user);
   }
 
+  /**
+   * "deleteUser" looks for the user by id and
+   * deletes the row of the user from the database.
+   * 
+   * It will not delete anything if it doesn't exist in the first place,
+   * throwing a RequestStatusException instead.
+   * 
+   * @param id
+   */
   @DeleteMapping("/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
   public void deleteUser(@PathVariable int id) {
