@@ -70,34 +70,73 @@ public class User {
     this.password = password;
   }
 
+  /**
+   * Auto-generated getter for Id.
+   * 
+   * @return an integer of User's Id
+   */
   public int getId() {
     return id;
   }
 
+  /**
+   * Auto-generated setter for Id.
+   * 
+   * @param an integer to set User's Id to
+   */
   public void setId(int id) {
     this.id = id;
   }
-
+  /**
+   * Auto-generated getter for username.
+   * 
+   * @return a String of User's username
+   */
   public String getUsername() {
     return username;
   }
 
+  /**
+   * Auto-generated setter for Username.
+   * 
+   * @param a String to set Username to
+   */
   public void setUsername(String username) {
     this.username = username;
   }
 
+  /**
+   * Auto-generated getter for password.
+   * 
+   * @return a String of User's password
+   */
   public String getPassword() {
     return password;
   }
 
+  /**
+   * Auto-generated setter for password.
+   * 
+   * @param a String to set user's password to
+   */
   public void setPassword(String password) {
     this.password = password;
   }
 
+  /**
+   * Auto-generated getter for expert.
+   * 
+   * @return a boolean of User's expert's status
+   */
   public boolean isExpert() {
     return isExpert;
   }
 
+  /**
+   * Auto-generated setter for isExpert.
+   * 
+   * @param a boolean to set user's expert status to
+   */
   public void setExpert(boolean isExpert) {
     this.isExpert = isExpert;
   }
@@ -106,6 +145,11 @@ public class User {
     return expertTags;
   }
 
+  /**
+   * Auto-generated setter for isExpert.
+   * 
+   * @param a boolean to set user's expert status to
+   */
   public void setExpertTags(Set<Tag> expertTags) {
     this.expertTags = expertTags;
   }
