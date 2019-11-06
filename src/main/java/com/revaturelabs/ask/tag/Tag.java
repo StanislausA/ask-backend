@@ -32,7 +32,7 @@ public class Tag implements Serializable {
 
   @ManyToMany(mappedBy = "associatedTags")
   Set<Question> taggedQuestions;
-  
+
   @ManyToMany(mappedBy = "expertTags")
   Set<User> expertTags;
 
@@ -72,6 +72,10 @@ public class Tag implements Serializable {
     this.name = name;
   }
 
+  /**
+   * Auto generated hashcode method
+   */
+
   @Override
   public int hashCode() {
     final int prime = 31;
@@ -81,6 +85,9 @@ public class Tag implements Serializable {
     return result;
   }
 
+  /**
+   * Auto generated equals method for tags
+   */
   @Override
   public boolean equals(Object obj) {
     if (this == obj)
