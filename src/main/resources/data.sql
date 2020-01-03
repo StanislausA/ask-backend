@@ -95,6 +95,21 @@ INSERT INTO questions VALUES
   	'2019-10-03'),
   (DEFAULT, 1, null, 'Trying to center my div using CSS',
   	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
+  	'2019-10-28'),
+  	(DEFAULT, 7, null, 'Variable is unable to be interpolated in HTML',
+  	'How can I add a variable to an object in the html? I am using ngx-countdown timer and I need to add the value of the json data into the [config] object, but I am having issues figuring out how. How can I interpolate or dynamically insert the value into the config object? Originally it looked like <countdown [config]={ leftTime: 120, format: m:s }>',
+  	'2019-10-09'),
+  (DEFAULT, 5, null, 'Using Fabric.js with Angular 4',
+  	'I am new to Angular and Fabric.js. I am trying to build a UI where users can drag and drop objects onto a canvas and then connect them with lines. In essence I am hoping to get the Angular4 drag and drop example from the first link to play well with the Fabric.js canvas found at the second link. The drag and drop example works but the Fabric.js canvas renders in Chrome as a square box and nothing more.',
+  	'2019-10-29'),
+  (DEFAULT, 2, null, 'Z Literal not working with SimpleDateFormat',
+  	'I am trying to parse a date that looks like this:2010-04-05T17:16:00Z. This is a valid date per http://www.ietf.org/rfc/rfc3339.txt. The Z literal (quote) imply that UTC is the preferred reference point for the specified time. If I try to parse it using SimpleDateFormat and this pattern: yyyy-MM-dd-T-HH:mm:ss it will be parsed as a Mon Apr 05 17:16:00 EDT 2010 SimpleDateFormat is unable to parse the string with these patterns:',
+  	'2019-10-03'),
+  (DEFAULT, 5, null, 'How to calculate maximum/minimum number of probes required to build a hash-table',
+  	'I am currently working with Algorithms Fourth Edition by Robert Sedgewick and Kevin Wayne and Im stuck on one of the exercises. I know that theres someone whos posted the solutions to many of the exercises from this book on GitHub, but I want to do them on my own so that I can understand and learn from them. I have been scanning the book for how to calculate the maximum/minimum number of probes required to build a hash-table (exercise 3.4.12), but I cant find any methods/functions/formulas which shows how to move forward when dealing with such a problem.',
+  	'2019-10-03'),
+  (DEFAULT, 1, null, 'Cannot center div using CSS',
+  	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
   	'2019-10-28');
 
 -- data for responses
@@ -135,7 +150,12 @@ INSERT INTO questions_tags VALUES
     (13, 5),
     (14, 3),
     (15, 12),
-    (16, 31);
+    (16, 31),
+    (17, 4),
+    (18, 5),
+    (19, 3),
+    (20, 12),
+    (21, 31);
  --   (DEFAULT, DEFAULT); -- if needed
  
 -- data for user_tags
