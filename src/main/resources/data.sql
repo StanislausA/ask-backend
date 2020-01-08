@@ -110,6 +110,18 @@ INSERT INTO questions VALUES
   	'2019-10-03'),
   (DEFAULT, 1, null, 'Cannot center div using CSS',
   	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
+  	'2019-10-28'),
+  	(DEFAULT, 5, null, 'New new new new',
+  	'I am currently working with Algorithms Fourth Edition by Robert Sedgewick and Kevin Wayne and Im stuck on one of the exercises. I know that theres someone whos posted the solutions to many of the exercises from this book on GitHub, but I want to do them on my own so that I can understand and learn from them. I have been scanning the book for how to calculate the maximum/minimum number of probes required to build a hash-table (exercise 3.4.12), but I cant find any methods/functions/formulas which shows how to move forward when dealing with such a problem.',
+  	'2019-10-03'),
+  (DEFAULT, 1, null, 'XXXXXXXX',
+  	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
+  	'2019-10-28'),
+  	(DEFAULT, 1, null, 'YYYYYYYYYY',
+  	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
+  	'2019-10-28'),
+  	(DEFAULT, 1, null, 'ZZZZZZZZZ',
+  	'I am trying to center my div element in the center of the screen. I can set it 35% of the way to the left, which looks centered sometimes, but when the screen size changes it gets ruined. There has to be a better way to do this.',
   	'2019-10-28');
 
 -- data for responses
@@ -155,7 +167,11 @@ INSERT INTO questions_tags VALUES
     (18, 5),
     (19, 3),
     (20, 12),
-    (21, 31);
+    (21, 31),
+    (22, 31),
+    (23, 31),
+    (24, 31),
+    (25, 31);
  --   (DEFAULT, DEFAULT); -- if needed
  
 -- data for user_tags
